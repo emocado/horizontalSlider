@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IDP G5T7 A/B Testing</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <!-- wRunner CSS -->
+    <link rel="stylesheet" href="css/wrunner-default-theme.css" />
+    <!-- wRunner Vanilla JS -->
+    <script src="js/wrunner-native.js"></script>
+
+    <!-- wRunner jQuery -->
+    <script src="js/wrunner-jquery.js"></script>
+
+    <!-- Demo CSS -->
+    <link rel="stylesheet" href="css/demo.css" />
+
+    <style>
+        .my-jquery-slider,
+        .my-js-slider {
+            position: relative;
+            max-width: 50px;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <main style="border: 1px solid black;
+                background-image: url('goal.jpg');
+                background-repeat: no-repeat;
+                width:380px;
+                height: 865px;">
+        <div style="text-align: center">
+            <h1 style = "position: relative; top:-10px">Alternative B</h1>
+        </div>
+        <br />
+        <div class = "container" style = "position: relative; top: 340px">
+            <button style="
+                    font-size: 15px;
+                    background-color: #1f2b85;
+                    color: white;
+                    padding: 5px;
+                    margin-bottom: 5px;
+                    width: 100px;
+                    border-radius: 10px;
+                ">
+                Water
+            </button>
+            <div class="single-slider1"></div>
+            <div style="display: flex; justify-content: space-between">
+                <span>$0</span>
+                <span>$1000</span>
+            </div>
+
+            <br />
+
+            <button style="
+                    font-size: 15px;
+                    background-color: #6b2084;
+                    color: white;
+                    padding: 5px;
+                    margin-bottom: 5px;
+                    width: 100px;
+                    border-radius: 10px;
+                ">
+                Gas
+            </button>
+            <div class="single-slider2"></div>
+            <div style="display: flex; justify-content: space-between">
+                <span>$0</span>
+                <span>$1000</span>
+            </div>
+
+            <br />
+
+            <button style="
+                    font-size: 15px;
+                    background-color: #66c7a7;
+                    color: white;
+                    padding: 5px;
+                    margin-bottom: 5px;
+                    width: 100px;
+                    border-radius: 10px;
+                ">
+                Electricity
+            </button>
+            <div class="single-slider3"></div>
+            <div style="display: flex; justify-content: space-between">
+                <span>$0</span>
+                <span>$1000</span>
+            </div>
+        </div>
+    </main>
+
+    <script>
+
+        //Single Slider
+        var singleSlider1 = wRunner({
+            roots: document.querySelector(".single-slider1"),
+            singleValue: 100,
+            limits: { minLimit: 0, maxLimit: 1000 },
+            step: 5,
+        });
+
+        var singleSlider2 = wRunner({
+            roots: document.querySelector(".single-slider2"),
+            singleValue: 100,
+            limits: { minLimit: 0, maxLimit: 1000 },
+            step: 5,
+        });
+
+        var singleSlider3 = wRunner({
+            roots: document.querySelector(".single-slider3"),
+            singleValue: 100,
+            limits: { minLimit: 0, maxLimit: 1000 },
+            step: 5,
+        });
+    </script>
+
+    <!--Syntax Highlighter (for demo only)-->
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</body>
+
+</html>
